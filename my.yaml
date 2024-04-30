@@ -16,5 +16,5 @@
       
     - name: Debug result
       ansible.builtin.debug:
-        msg: result
+        var: result
 
