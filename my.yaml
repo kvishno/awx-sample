@@ -12,7 +12,8 @@
     - name: GET user 1
       ansible.builtin.uri:
         url: https://jsonplaceholder.typicode.com/posts/1
-        register: result
+      register: result
+      
     - name: Debug result
       ansible.builtin.debug:
         msg: result
