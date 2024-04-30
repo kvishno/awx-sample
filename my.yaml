@@ -1,0 +1,19 @@
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Foo
+      ansible.builtin.debug:
+        msg: "Bar"
+
+    - name: Check connection to google
+      ansible.builtin.uri:
+        url: http://www.google.com
+    
+    - name: GET user 1
+      ansible.builtin.uri:
+        url: https://jsonplaceholder.typicode.com/posts/1
+        register: result
+    - name: Debug result
+      ansible.builtin.debug:
+        msg: result
+
